@@ -1,40 +1,8 @@
 ---
 name: mind-map-generator
-description: Call the generateTreeMind tool to create visual mind maps, returning image URL and edit link. Suitable for story structure visualization, plot relationship graph display
-category: tools
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Call the generateTreeMind tool to create visual mind maps, returning image URL and edit link. Suitable for story structure visualization, plot relationship graph display
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language standards
-      - type: changed
-        content: Changed model to opus
-      - type: improved
-        content: Optimized descriptions for functionality, core capabilities, input requirements, and output format to comply with imperative language standards
-      - type: added
-        content: Added usage scenarios, constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Restructured according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, used imperative language, streamlined main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Mind Map Generator Expert
@@ -82,21 +50,6 @@ Call the `generateTreeMind` tool to create visual mind maps and provide image UR
 - Returned image URLs and edit links must be valid and accessible
 - Do not introduce any information unrelated to mind map generation in output
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` for more detailed examples:
-- `examples.md` - Contains mind map generation examples for different input content (story outlines, character lists) and style settings
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on the mind map generator tool.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field; changed model to opus; optimized descriptions for functionality, core capabilities, input requirements, and output format; added usage scenarios, constraints, examples, and detailed documentation sections |
-| 2.0.0 | 2026-01-11 | Restructured according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

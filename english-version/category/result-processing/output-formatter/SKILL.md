@@ -1,40 +1,8 @@
 ---
 name: output-formatter
-description: Integrate agent output results into structured final output, support multiple formats. Suitable for integrating analysis reports, generating structured reports
-category: result-processing
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Integrate agent output results into structured final output, support multiple formats. Suitable for integrating analysis reports, generating structured reports
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: changed
-        content: Changed model to opus
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, core capabilities, core steps, input requirements, and output format to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Output Formatting Expert
@@ -111,21 +79,6 @@ Provide structured final results according to specified output format. For examp
 - Strictly follow specified output format requirements to ensure result standardization.
 - Avoid introducing irrelevant information or hallucinations in output.
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` directory for more detailed examples:
-- `examples.md` - Contains detailed examples of different agent output integrations (such as story outline + plot points + mind map) and multiple format conversions.
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on output formatting.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; changed model to opus; optimized descriptions of functionality, use cases, core capabilities, core steps, input requirements, and output format to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

@@ -1,47 +1,8 @@
 ---
 name: drama-analyzer
-description: Analyze story text, extract main plot points and analyze dramatic functions. Suitable for analyzing novels, script outlines, story summaries, and other texts, identifying key turning points and emotional nodes
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Analyze story text, extract main plot points and analyze dramatic functions. Suitable for analyzing novels, script outlines, story summaries, and other texts, identifying key turning points and emotional nodes
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: changed
-        content: Changed model to opus
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-      - type: added
-        content: Added references/ structure to store detailed examples
-  - version: 1.1.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Added multi-scenario examples
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Script Analysis Expert
@@ -95,19 +56,7 @@ Analyze story text, extract main plot points and analyze the dramatic function o
 - **Objective Accuracy**: Strictly summarize according to story text original meaning, avoid creating or adding non-existent plots
 - **Format Specifications**: Strictly follow output format, each plot point in separate paragraph, clearly label dramatic functions
 
-## Detailed Documentation
+## Resources
 
-See `{baseDir}/references/` directory for more documentation:
-- `examples.md` - More scenario examples (suspense, romance, workplace counterattack, ancient court intrigue, rebirth revenge, etc.)
-- `guide.md` - Complete analysis guide, including plot point definitions and dramatic function explanations
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; changed model to opus; optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications, added references structure |
-| 1.1.0 | 2026-01-10 | Added multi-scenario examples |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

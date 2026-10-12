@@ -1,47 +1,7 @@
 ---
 name: drama-analyzer
 description: 分析故事文本，提炼主要情节点并分析戏剧功能。适用于分析小说、剧本大纲、故事梗概等文本，识别关键转折点和情感节点
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: changed
-        content: 模型更改为 opus
-      - type: improved
-        content: 优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-      - type: added
-        content: 添加 references/ 结构存放详细示例
-  - version: 1.1.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 添加多场景示例
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 剧本分析专家
@@ -81,33 +41,15 @@ changelog:
 ...
 ```
 
-## 要求
+## 硬性约束
 
-- 每个情节点的表述不超过100字
+- 每个情节点表述不超过100字
 - 至少提炼5个情节点
-- 严格按照故事文本原文意思总结，不自行创作改编
 - 不使用阿拉伯数字为情节点标号
+- 严格依据原文，不自行创作
+- 建议输入 ≥500 字完整文本
 
-## 最佳实践
+## 参考资料
 
-- **文本选择**: 建议使用完整的故事文本，至少500字以上，确保有足够的情节内容
-- **分析深度**: 深入理解故事文本，不要停留在表面，要挖掘情节点的深层戏剧功能
-- **客观准确**: 严格按照故事文本原文意思总结，避免自行创作或添加不存在的情节
-- **格式规范**: 严格按照输出格式，每个情节点单独成段，清晰标注戏剧功能
-
-## 详细文档
-
-参见 `{baseDir}/references/` 目录获取更多文档:
-- `examples.md` - 更多场景示例（悬疑、爱情、职场逆袭、古装宫斗、重生复仇等）
-- `guide.md` - 完整分析指南，包含情节点定义和戏剧功能说明
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；模型更改为 opus；优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构，添加 references 结构 |
-| 1.1.0 | 2026-01-10 | 添加多场景示例 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

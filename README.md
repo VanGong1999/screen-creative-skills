@@ -5,7 +5,8 @@
 > 31 个专业 AI Skills，涵盖从小说筛选到剧本创作的全流程能力
 > 支持竖屏短剧、中长剧、长剧/电视剧、电影剧本等多种内容类型
 >
-> 版本：2.1.0 | 更新日期：2026-01-11 
+> 版本：2.2.0 | 更新日期：2026-10-12  
+> 兼容：**Claude Code** · **Cursor** · **Codex**（Agent Skills 开放格式） 
 
 ---
 ## 剧本知识库：
@@ -463,59 +464,101 @@ script-evaluator → story-summarizer → character-profile → script-evaluator
 
 ---
 
-## 使用指南
+## 使用指南（Claude Code / Cursor / Codex）
 
-### 安装 Skills
+本仓库每个 skill 都是标准 Agent Skills 目录（`SKILL.md` + 可选 `references/`），三端可共用。用安装脚本一键软链到对应目录即可（推荐，升级仓库后自动生效）。
 
 ```bash
-# 将 skills 目录放置在 Claude Code 支持的位置
-.claude/skills/
+git clone https://github.com/GongLingRui/screen-creative-skills.git
+cd screen-creative-skills
+
+# 中文 skills（默认）
+./scripts/install-skills.sh claude    # → ~/.claude/skills
+./scripts/install-skills.sh cursor    # → ~/.cursor/skills
+./scripts/install-skills.sh codex     # → ~/.agents/skills
+./scripts/install-skills.sh all       # 三端一起装
+
+# 英文 skills
+./scripts/install-skills.sh cursor en
 ```
 
-### 调用 Skills
+也可装到**当前项目**（团队共享）：
 
-在对话中直接提及 skill 名称即可激活：
+```bash
+./scripts/install-skills.sh .claude/skills      # Claude Code 项目级
+./scripts/install-skills.sh .cursor/skills      # Cursor 项目级
+./scripts/install-skills.sh .agents/skills      # Codex 项目级
+```
 
+校验结构（frontmatter、链接、命名）：
+
+```bash
+python3 scripts/validate-skills.py
 ```
-你：使用 story-five-elements 分析这个故事...
-你：先用 drama-evaluator 评估短剧改编潜力，然后用 drama-planner 做策划
-你：用 script-evaluator 评估这个电影剧本的质量
+
+### 各平台怎么用
+
+| 平台 | 发现路径（常见） | 怎么调用 |
+|------|------------------|----------|
+| **Claude Code** | `~/.claude/skills/` 或项目 `.claude/skills/` | 对话提及 skill 名，或 `/character-profile` |
+| **Cursor** | `~/.cursor/skills/`、`.cursor/skills/`；也兼容 `.claude/skills/`、`.agents/skills/` | Agent 聊天输入 `/skill-name`，或让 Agent 按 description 自动选用；也可 `@` 附加 |
+| **Codex** | `~/.agents/skills/` 或项目 `.agents/skills/` | `/skills` 选择，或 `$character-profile`；也可由 description 隐式触发 |
+
+示例：
+
+```text
+使用 story-five-elements 分析这个故事
+先用 drama-evaluator 评估短剧改编潜力，再用 drama-planner 做策划
+用 script-evaluator 评估这份电影剧本
+/character-profile
+$ip-evaluator
 ```
+
+### 选型提示
+
+- **纯文本初筛** → `novel-evaluator`（不联网）
+- **版权/立项尽调** → `ip-evaluator`（结合公开网络信息）
+- **长文戏剧分析流水线** → `drama-workflow`（内部调用 `text-truncator` → `text-splitter` → `drama-analyzer` → `result-integrator`）
+- **大情节点 + 细情节点** → `plot-workflow`
+
+更多组合见 [docs/skill-dependencies.md](docs/skill-dependencies.md) 与 [docs/workflow-examples.md](docs/workflow-examples.md)。
 
 ### 目录结构
 
 ```
-skills/
-├── category/                    # Skills 分类目录
-│   ├── story-analysis/          # 故事分析类 (8)
-│   ├── character-analysis/      # 人物分析类 (2)
-│   ├── evaluation/              # 评估筛选类 (4)
-│   ├── creation/                # 创作策划类 (2)
-│   ├── series-analysis/         # 剧集分析类 (1)
-│   ├── workflow/                # 工作流编排类 (2)
-│   ├── result-processing/       # 结果处理类 (2)
-│   ├── tools/                   # 工具辅助类 (5)
-│   ├── knowledge-research/      # 知识检索类 (2)
-│   └── novel-screening/         # 小说初筛类 (4)
-├── docs/                        # 文档目录
-│   ├── skill-dependencies.md    # Skills 依赖关系文档
-│   ├── workflow-examples.md     # 组合使用工作流示例
-│   └── version-management.md    # 版本管理规范
-└── README.md                    # 本文档
+screen-creative-skills/
+├── category/                 # 中文 Skills（31）
+│   ├── story-analysis/       # 故事分析 (8)
+│   ├── character-analysis/   # 人物分析 (2)
+│   ├── evaluation/           # 评估筛选 (4)
+│   ├── creation/             # 创作策划 (2)
+│   ├── series-analysis/      # 剧集分析 (1)
+│   ├── workflow/             # 工作流编排 (2)
+│   ├── result-processing/    # 结果处理 (2)
+│   ├── tools/                # 工具辅助 (4)
+│   ├── knowledge-research/   # 知识检索 (2)
+│   └── novel-screening/      # 小说初筛 (4)
+├── english-version/category/ # 英文 Skills（同步）
+├── scripts/
+│   ├── install-skills.sh     # 三端安装
+│   └── validate-skills.py    # 结构校验
+├── docs/
+│   ├── skill-dependencies.md
+│   └── workflow-examples.md
+└── README.md
 ```
 
 ---
 
 ## 规范说明
 
-所有 Skills 遵循 **Agent Skills 官方规范**：
+遵循开放 **Agent Skills** 格式（Claude Code / Cursor / Codex 通用）：
 
-- `maintainer`: 宫凡
-- `license`: MIT
-- `compatibility`: Claude Code 1.0+
-- 使用命令式语言风格
-- 清晰的功能描述和使用场景
-- 完整的版本管理和变更日志
+- Frontmatter 仅保留 `name`、`description`、`license`（跨平台最小必要集）
+- `description` 同时写清「做什么」与「何时用」，便于自动触发
+- 硬性约束写在主 `SKILL.md`；细则与长示例放在 `references/`
+- 编排类 skill 写明子 skill 调用链
+- 命令式、可执行；避免无用的 changelog 噪音
 
 ---
 
@@ -523,9 +566,10 @@ skills/
 
 | 版本 | 日期 | 更新内容 |
 |------|------|----------|
-| 2.1.0 | 2026-01-11 | 添加维护者信息；全面更新 README 文档，扩展支持范围（短剧、中长剧、长剧、电影等），增加多种实战案例 |
-| 2.0.0 | 2026-01-11 | 按照官方规范重构所有31个Skills；优化description；添加版本管理 |
-| 1.0 | 2026-01-10 | 初始版本，完成31个Skills的整理 |
+| 2.2.0 | 2026-10-12 | 三端安装说明与脚本；删除无用 changelog/版本历史；精简 frontmatter；强化 workflow 调用链、novel/ip 评估分工与硬约束；结构校验脚本 |
+| 2.1.0 | 2026-01-11 | 维护者信息；README 扩展短剧/中长剧/长剧/电影场景与案例 |
+| 2.0.0 | 2026-01-11 | 按官方规范重构 31 个 Skills |
+| 1.0 | 2026-01-10 | 初始版本 |
 
 ---
 

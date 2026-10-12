@@ -1,14 +1,8 @@
 ---
 name: story-five-elements
-description: "Analyze five core story elements — genre type, story summary, character biographies, character relationships, and major plot points — producing a structured comprehensive report with optional mind map. Use when preparing for script adaptation, conducting deep story analysis, creating story development documentation, or evaluating overall story quality and market potential."
+description: >-
+  Analyze five core story elements — genre type, story summary, character biographies, character relationships, and major plot points — producing a structured comprehensive report with optional mind map. Use when preparing for script adaptation, conducting deep story analysis, creating story development documentation, or evaluating overall story quality and market potential.
 license: MIT
-compatibility: Claude Code 1.0+
-metadata:
-  category: story-analysis
-  version: 2.1.0
-  last_updated: 2026-01-11
-  maintainer: Gong Fan
-  model: opus
 ---
 
 # Story Five Elements Analysis Expert
@@ -69,6 +63,11 @@ V. Major Plot Points
 
 ## References
 
-See `{baseDir}/references/` for detailed worked examples and analysis techniques:
+See [references/](references/) for detailed worked examples and analysis techniques:
 - `examples.md` — full analysis examples across genres (urban emotion, court intrigue, suspense mystery)
 - `guide.md` — complete five-elements analysis guide
+
+## Resources
+
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

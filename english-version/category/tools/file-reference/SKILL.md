@@ -1,41 +1,8 @@
 ---
 name: file-reference
-description: Process and analyze user-uploaded file references, extract key information, and provide application recommendations. Suitable for parsing @symbol references, natural language references, and extracting vertical short drama planning information
-category: tools
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Process and analyze user-uploaded file references, extract key information, and provide application recommendations. Suitable for parsing @symbol references, natural language references, and extracting vertical short drama planning information
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language standards
-      - type: changed
-        content: Changed model to opus
-      - type: improved
-        content: Optimized descriptions for functionality, supported reference formats, core capabilities, input requirements, and output format to comply with imperative language standards
-      - type: added
-        content: Added usage scenarios, constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Restructured according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, used imperative language, streamlined main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # File Reference Parsing Expert
@@ -106,21 +73,6 @@ Process and analyze user-uploaded file references, extract key information, and 
 - Provide specific, actionable application recommendations to assist user creation decisions
 - Avoid introducing any hallucinations or false information in output
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` for more detailed examples:
-- `examples.md` - Contains detailed examples of reference parsing and application recommendations for various file types (documents, images, PDFs, etc.)
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on file reference parsing.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field; changed model to opus; optimized descriptions for functionality, supported reference formats, core capabilities, input requirements, and output format; added usage scenarios, constraints, examples, and detailed documentation sections |
-| 2.0.0 | 2026-01-11 | Restructured according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

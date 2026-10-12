@@ -1,37 +1,8 @@
 ---
 name: story-outline-evaluator
-description: Professionally evaluate story outlines, judge and score from dimensions of market potential, innovation attributes, and content highlights. Suitable for story outline quality assessment, IP adaptation potential judgment, project approval decision
-category: evaluation
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Professionally evaluate story outlines, judge and score from dimensions of market potential, innovation attributes, and content highlights. Suitable for story outline quality assessment, IP adaptation potential judgment, project approval decision
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: added
-        content: Added allowed-tools (Read) and model (opus) fields
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Story Outline Evaluation Expert
@@ -128,20 +99,7 @@ Total Score: [X.X]
 - Scoring should be objective and fair, accompanied by detailed analysis.
 - Recommendations should be specific and feasible, helping story outline improvement.
 
-## Examples
+## Resources
 
-Please refer to `{baseDir}/references/examples.md` for detailed evaluation examples. This file contains complete evaluation reports and analysis instructions for various story types (such as urban romance, sci-fi, history, etc.).
-
-## Detailed Documentation
-
-See `{baseDir}/references/guide.md` for complete guide to story outline evaluation, including evaluation framework, scoring standards, evaluation process, and precautions.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field, added allowed-tools (Read) and model (opus) fields, adjusted main content language style, added constraints, and directed to references/examples.md |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

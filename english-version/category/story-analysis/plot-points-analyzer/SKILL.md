@@ -1,41 +1,8 @@
 ---
 name: plot-points-analyzer
-description: Analyze story plot points, identify key plots and turning points. Suitable for deep analysis of plot structure, evaluating plot development effectiveness
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Analyze story plot points, identify key plots and turning points. Suitable for deep analysis of plot structure, evaluating plot development effectiveness
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: added
-        content: Added allowed-tools (Read) and model (opus) fields
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Plot Point Analysis Expert
@@ -99,21 +66,6 @@ Analyze plot points in stories, identify key plots and turning points, describe 
 - Ensure accurate plot point classification, clear function description.
 - Suggestions should be actionable and guide plot optimization.
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` directory for more detailed examples:
-- `examples.md` - Contains key plot point analysis examples for different story types (such as urban romance, ancient fantasy, suspense mystery).
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on plot point analysis.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; added allowed-tools (Read) and model (opus) fields; optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

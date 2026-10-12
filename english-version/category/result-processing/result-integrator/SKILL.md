@@ -1,41 +1,8 @@
 ---
 name: result-integrator
-description: Integrate multiple plot point analysis results into comprehensive reports, generating high-quality analysis through deduplication, classification, sorting, and summarization. Suitable for integrating multiple analysis sources, generating unified reports
-category: result-processing
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Integrate multiple plot point analysis results into comprehensive reports, generating high-quality analysis through deduplication, classification, sorting, and summarization. Suitable for integrating multiple analysis sources, generating unified reports
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: added
-        content: Added allowed-tools (Read) and model (opus) fields
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, integration principles, core steps, input requirements, output format, and integration requirements to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Result Integration Tool
@@ -114,21 +81,6 @@ III. Dramatic Structure Evaluation
 - Report content must be logically coherent, easy to read and understand.
 - Ensure final output report format is standardized and meets expected requirements.
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` directory for more detailed examples:
-- `examples.md` - Contains detailed report examples of multi-agent plot point analysis result integration, deduplication, classification, sorting, and summarization.
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on result integration.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; added allowed-tools (Read) and model (opus) fields; optimized descriptions of functionality, use cases, integration principles, core steps, input requirements, output format, and integration requirements to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

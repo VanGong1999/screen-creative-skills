@@ -1,42 +1,8 @@
 ---
 name: series-analyzer
-description: Analyze aired series, including information retrieval, scene-by-scene analysis, five elements analysis, and web search. Suitable for deep analysis of series creation techniques, learning plot design
-category: series-analysis
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Analyze aired series, including information retrieval, scene-by-scene analysis, five elements analysis, and web search. Suitable for deep analysis of series creation techniques, learning plot design
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - WebSearch
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: added
-        content: Added allowed-tools (WebSearch, Read) and model (opus) fields
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, core functions, workflow, input requirements, output format, and technical features to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Aired Series Analysis and Scene-by-Scene Breakdown Expert
@@ -145,21 +111,6 @@ V. Comprehensive Evaluation and Recommendations
 - Report content must be clearly structured, professional language, easy to understand.
 - Avoid introducing any hallucinations or false information in output.
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` directory for more detailed examples:
-- `examples.md` - Contains detailed analysis report examples for different series types (such as ancient costume, urban, suspense).
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on aired series analysis.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; added allowed-tools (WebSearch, Read) and model (opus) fields; optimized descriptions of functionality, use cases, core functions, workflow, input requirements, output format, and technical features to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

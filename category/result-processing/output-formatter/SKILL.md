@@ -1,40 +1,7 @@
 ---
 name: output-formatter
 description: 整合智能体输出结果为结构化最终输出，支持多种格式。适用于整合分析报告、生成结构化报告
-category: result-processing
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: changed
-        content: 模型更改为 opus
-      - type: improved
-        content: 优化功能、使用场景、核心能力、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 输出整理专家
@@ -111,21 +78,6 @@ changelog:
 - 严格遵守指定的输出格式要求，确保结果的规范性。
 - 避免在输出中引入无关信息或幻觉。
 
-## 示例
+## 参考资料
 
-参见 `{baseDir}/references/examples.md` 目录获取更多详细示例:
-- `examples.md` - 包含不同智能体输出整合（如故事大纲+情节点+思维导图）和多种格式转换的详细示例。
-
-## 详细文档
-
-参见 `{baseDir}/references/examples.md` 获取关于输出整理的详细指导与案例。
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；模型更改为 opus；优化功能、使用场景、核心能力、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)

@@ -1,41 +1,8 @@
 ---
 name: novel-summarizer
-description: Read and comprehend novel text, summarize into fluent story outline. Suitable for novel initial screening, generating 500-800 word story outlines
-category: novel-screening
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Read and comprehend novel text, summarize into fluent story outline. Suitable for novel initial screening, generating 500-800 word story outlines
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language standards
-      - type: added
-        content: Added allowed-tools (Read) and model (opus) fields
-      - type: improved
-        content: Optimized descriptions for functionality, usage scenarios, core capabilities, workflow, constraints, and output format to comply with imperative language standards
-      - type: added
-        content: Added examples and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Restructured according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, used imperative language, streamlined main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Story Outline Generation Expert (Novel Edition)
@@ -72,21 +39,6 @@ Read and comprehend story text, summarize into fluent story outline, controlling
 
 Directly output fluent text summary of story outline.
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` for more detailed examples:
-- `examples.md` - Detailed summarization examples (different types such as urban romance, historical romance, rebirth revenge, etc.)
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on novel summarization.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field; added allowed-tools (Read) and model (opus) fields; optimized descriptions for functionality, usage scenarios, core capabilities, workflow, constraints, and output format; added examples and detailed documentation sections |
-| 2.0.0 | 2026-01-11 | Restructured according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

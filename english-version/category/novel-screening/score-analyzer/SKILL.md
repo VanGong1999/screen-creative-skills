@@ -1,40 +1,8 @@
 ---
 name: score-analyzer
-description: Analyze multi-round evaluation result scoring data, calculate various metrics, calculate rating grades. Suitable for analyzing scoring trends, calculating S/A/B ratings
-category: novel-screening
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Analyze multi-round evaluation result scoring data, calculate various metrics, calculate rating grades. Suitable for analyzing scoring trends, calculating S/A/B ratings
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language standards
-      - type: changed
-        content: Changed model to opus
-      - type: improved
-        content: Optimized descriptions for functionality, usage scenarios, rating grade definitions, statistical metrics, core steps, input requirements, and output format to comply with imperative language standards
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Restructured according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, used imperative language, streamlined main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Score Analysis Agent
@@ -132,21 +100,6 @@ IV. High Score Statistics
 - Report content must be objective and fair, based on data generation without subjective judgment
 - Ensure calculation results are accurate
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` for more detailed examples:
-- `examples.md` - Contains detailed analysis report examples for different evaluation results (multiple high scores, stable average scores, high score fluctuation, etc.)
-
-## Detailed Documentation
-
-See `{baseDir}/references/examples.md` for detailed guidance and cases on score analysis.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field; changed model to opus; optimized descriptions for functionality, usage scenarios, rating grade definitions, statistical metrics, core steps, input requirements, and output format; added constraints, examples, and detailed documentation sections |
-| 2.0.0 | 2026-01-11 | Restructured according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

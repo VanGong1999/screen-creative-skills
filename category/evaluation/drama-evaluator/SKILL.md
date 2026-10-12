@@ -1,42 +1,7 @@
 ---
 name: drama-evaluator
 description: 依据竖屏短剧评估标准，从核心爽点、故事类型等维度评估打分。适用于评估故事改编为竖屏短剧的潜力、分析市场竞争力
-category: evaluation
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: changed
-        content: 模型更改为 opus
-      - type: improved
-        content: 优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-      - type: added
-        content: 添加 references/ 结构存放详细示例
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 竖屏短剧评估专家
@@ -154,18 +119,14 @@ changelog:
 - **对标学习**: 积极对标市场爆款，学习成功经验
 - **建议可落地**: 提供的优化建议要具体可执行，避免空泛
 
-## 详细文档
+## 硬性约束
 
-参见 `{baseDir}/references/` 目录获取更多文档:
-- `examples.md` - 详细评估示例（都市逆袭、古装宫斗、现代情感等各类题材）
-- `guide.md` - 详细评估标准和评分细则
+- 高分从严；评分到小数点后一位
+- 明确短剧改编适配性与风险点
 
----
+## 参考资料
 
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；模型更改为 opus；优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构，添加 references 结构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [evaluation-standards.md](references/evaluation-standards.md)
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)
+- [market-analysis.md](references/market-analysis.md)

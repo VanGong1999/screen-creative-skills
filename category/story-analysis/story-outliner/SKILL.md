@@ -1,41 +1,7 @@
 ---
 name: story-outliner
 description: 阅读理解故事文本，总结人物、关系、情节，整理成流畅大纲。适用于快速了解故事核心、为剧本创作提供大纲基础
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: added
-        content: 添加 allowed-tools (Read) 和 model (opus) 字段
-      - type: improved
-        content: 优化功能、使用场景、核心步骤、输入要求、输出格式、要求等描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 故事大纲生成专家
@@ -75,21 +41,11 @@ changelog:
 - **格式要求**: 直接输出正文，不带任何标题。
 - **避免评述**: 不对文本内容做总结性或评述性概述。
 
-## 示例
+## 硬性约束
 
-参见 `{baseDir}/references/examples.md` 目录获取更多详细示例:
-- `examples.md` - 包含不同叙事视角（第一人称、第三人称）和复杂人物关系的故事大纲示例。
+- 大纲通常控制在300–500字（除非用户另有要求）
+- 严格依据原文，不自行创作关键情节
 
-## 详细文档
+## 参考资料
 
-参见 `{baseDir}/references/examples.md` 获取关于故事大纲生成的详细指导与案例。
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；添加 allowed-tools (Read) 和 model (opus) 字段；优化功能、使用场景、核心步骤、输入要求、输出格式、要求等描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)

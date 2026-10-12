@@ -1,15 +1,8 @@
 ---
 name: script-evaluator
-description: "Evaluate film and TV scripts across ideological, artistic, and entertainment value dimensions, producing structured scoring reports with follow-up recommendations. Use when assessing script development quality, determining modification direction, reviewing scripts before project approval, or benchmarking screenwriter capabilities."
-allowed-tools: "Read, Write"
+description: >-
+  Evaluate film and TV scripts across ideological, artistic, and entertainment value dimensions, producing structured scoring reports with follow-up recommendations. Use when assessing script development quality, determining modification direction, reviewing scripts before project approval, or benchmarking screenwriter capabilities.
 license: MIT
-compatibility: Claude Code 1.0+
-metadata:
-  category: evaluation
-  version: 2.1.0
-  last_updated: 2026-01-11
-  maintainer: Gong Fan
-  model: opus
 ---
 
 # Film and TV Script Evaluation Expert
@@ -110,13 +103,7 @@ Deeply read film and TV scripts, conduct professional evaluation and scoring fro
 - Scoring should be objective and fair, accompanied by detailed analysis.
 - Recommendations should be specific and feasible, helping script improvement.
 
-## Examples
+## Resources
 
-Please refer to `{baseDir}/references/examples.md` for detailed evaluation examples. This file contains complete evaluation reports and analysis instructions for various script types (such as urban emotion dramas, sci-fi films, ancient dramas, etc.).
-
-## Detailed Documentation
-
-See `{baseDir}/references/` directory for more documentation:
-- `guide.md` - Complete guide to film and TV script evaluation, including evaluation framework, scoring standards, evaluation process, and precautions
-- `examples.md` - Detailed evaluation examples
-
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

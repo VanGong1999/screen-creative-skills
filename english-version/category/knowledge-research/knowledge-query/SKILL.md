@@ -1,43 +1,8 @@
 ---
 name: knowledge-query
-description: Specialize in vertical short drama knowledge base queries and information retrieval, providing professional knowledge services. Suitable for querying script segments, high-energy plots, creation techniques, commercial operations, and other professional knowledge
-category: knowledge-research
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Specialize in vertical short drama knowledge base queries and information retrieval, providing professional knowledge services. Suitable for querying script segments, high-energy plots, creation techniques, commercial operations, and other professional knowledge
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language standards
-      - type: changed
-        content: Changed model to opus
-      - type: improved
-        content: Optimized descriptions for functionality, usage scenarios, core steps, input requirements, and output format to comply with imperative language standards
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Restructured according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, used imperative language, streamlined main content
-      - type: added
-        content: Added license and compatibility optional fields
-      - type: added
-        content: Added allowed-tools (Read) and model fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Vertical Short Drama Knowledge Base Query Expert
@@ -107,16 +72,6 @@ Specialize in knowledge base queries and information retrieval, providing accura
 - Knowledge summary must be objective and accurate; avoid subjective commentary
 - Output content should be structured and easy to understand and apply
 
-## Examples
+## Resources
 
-See `{baseDir}/references/examples.md` for detailed examples. This file contains complete outputs and analysis explanations for various knowledge query scenarios.
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field; changed model to opus; optimized descriptions for functionality, usage scenarios, core steps, input requirements, and output format; added constraints, examples, and detailed documentation sections |
-| 2.0.0 | 2026-01-11 | Restructured according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)

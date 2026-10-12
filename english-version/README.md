@@ -5,7 +5,8 @@
 > 31 Professional AI Skills covering the full workflow from novel screening to script creation
 > Supporting multiple content types: vertical short dramas, medium-length dramas, long dramas/TV series, film scripts, and more
 >
-> Version: 2.1.0 | Update Date: 2026-01-11 | Maintainer: Gong Fan
+> Version: 2.2.0 | Update Date: 2026-10-12 | Maintainer: Gong Fan  
+> Compatible with **Claude Code** · **Cursor** · **Codex**
 
 ---
 
@@ -458,59 +459,63 @@ script-evaluator → story-summarizer → character-profile → script-evaluator
 
 ---
 
-## Usage Guide
+## Usage Guide (Claude Code / Cursor / Codex)
 
-### Install Skills
+Each skill is a standard Agent Skills folder (`SKILL.md` + optional `references/`). Install with the repo script (from repo root):
 
 ```bash
-# Place the skills directory in a location supported by Claude Code
-.claude/skills/
+./scripts/install-skills.sh claude en   # → ~/.claude/skills
+./scripts/install-skills.sh cursor en   # → ~/.cursor/skills
+./scripts/install-skills.sh codex en    # → ~/.agents/skills
+./scripts/install-skills.sh all en
+
+# Project-local
+./scripts/install-skills.sh .cursor/skills en
+python3 scripts/validate-skills.py
 ```
 
-### Invoke Skills
+| Platform | Typical paths | How to invoke |
+|----------|---------------|---------------|
+| **Claude Code** | `~/.claude/skills/`, `.claude/skills/` | Mention the skill, or `/character-profile` |
+| **Cursor** | `~/.cursor/skills/`, `.cursor/skills/` (also reads `.claude/` / `.agents/`) | `/skill-name`, `@` attach, or auto-select via description |
+| **Codex** | `~/.agents/skills/`, `.agents/skills/` | `/skills`, `$character-profile`, or implicit match |
 
-Mention the skill name directly in conversation to activate:
+Examples:
 
+```text
+Use story-five-elements to analyze this story
+First drama-evaluator, then drama-planner
+/character-profile
+$ip-evaluator
 ```
-You: Use story-five-elements to analyze this story...
-You: First use drama-evaluator to evaluate short drama adaptation potential, then use drama-planner for planning
-You: Use script-evaluator to evaluate the quality of this film script
-```
+
+**Routing tips:** text-only screening → `novel-evaluator`; rights/market diligence → `ip-evaluator`; long drama pipeline → `drama-workflow`; beat sheet pipeline → `plot-workflow`.
+
+See [docs/skill-dependencies.md](docs/skill-dependencies.md) and [docs/workflow-examples.md](docs/workflow-examples.md).
 
 ### Directory Structure
 
 ```
-skills/
-├── category/                    # Skills classification directory
-│   ├── story-analysis/          # Story analysis (8)
-│   ├── character-analysis/      # Character analysis (2)
-│   ├── evaluation/              # Evaluation and selection (4)
-│   ├── creation/                # Creation and planning (2)
-│   ├── series-analysis/         # Series analysis (1)
-│   ├── workflow/                # Workflow orchestration (2)
-│   ├── result-processing/       # Result processing (2)
-│   ├── tools/                   # Tool support (5)
-│   ├── knowledge-research/      # Knowledge research (2)
-│   └── novel-screening/         # Novel screening (4)
-├── docs/                        # Documentation directory
-│   ├── skill-dependencies.md    # Skills dependency documentation
-│   ├── workflow-examples.md     # Combined usage workflow examples
-│   └── version-management.md    # Version management specifications
-└── README.md                    # This document
+english-version/
+├── category/                 # English Skills (31)
+├── docs/
+│   ├── skill-dependencies.md
+│   └── workflow-examples.md
+└── README.md
 ```
+
+(Repo root also has `scripts/install-skills.sh` and Chinese `category/`.)
 
 ---
 
 ## Specifications
 
-All Skills follow **Agent Skills Official Specifications**:
+Open **Agent Skills** format shared by Claude Code, Cursor, and Codex:
 
-- `maintainer`: Gong Fan
-- `license`: MIT
-- `compatibility`: Claude Code 1.0+
-- Use imperative language style
-- Clear functional descriptions and use cases
-- Complete version management and changelog
+- Frontmatter: `name`, `description`, `license` only
+- Descriptions include WHAT + WHEN for reliable triggering
+- Hard constraints in `SKILL.md`; long examples in `references/`
+- Workflow skills declare explicit sub-skill call chains
 
 ---
 
@@ -518,9 +523,10 @@ All Skills follow **Agent Skills Official Specifications**:
 
 | Version | Date | Updates |
 |---------|------|---------|
-| 2.1.0 | 2026-01-11 | Added maintainer information; comprehensively updated README documentation, expanded support scope (short dramas, medium-length dramas, long dramas, films, etc.), added multiple real-world cases |
-| 2.0.0 | 2026-01-11 | Refactored all 31 Skills according to official specifications; optimized descriptions; added version management |
-| 1.0 | 2026-01-10 | Initial version, completed organization of 31 Skills |
+| 2.2.0 | 2026-10-12 | Cross-platform install docs/scripts; remove changelog noise; slim frontmatter; stronger workflows and novel/ip split |
+| 2.1.0 | 2026-01-11 | Maintainer info; expanded README scenarios |
+| 2.0.0 | 2026-01-11 | Refactored 31 Skills to official format |
+| 1.0 | 2026-01-10 | Initial release |
 
 ---
 

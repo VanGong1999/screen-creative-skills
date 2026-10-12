@@ -1,40 +1,7 @@
 ---
 name: score-analyzer
 description: 分析多轮评估结果评分数据，统计各项指标，计算评级等级。适用于分析评分趋势、计算S/A/B评级
-category: novel-screening
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools: []
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: changed
-        content: 模型更改为 opus
-      - type: improved
-        content: 优化功能、使用场景、评级等级定义、统计指标、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 评分分析智能体
@@ -132,21 +99,6 @@ changelog:
 - 报告内容需客观公正，基于数据生成，不进行主观判断。
 - 确保计算结果准确无误。
 
-## 示例
+## 参考资料
 
-参见 `{baseDir}/references/examples.md` 目录获取更多详细示例:
-- `examples.md` - 包含不同评估结果（如多次高分、平均分稳定、分数波动大）的详细分析报告示例。
-
-## 详细文档
-
-参见 `{baseDir}/references/examples.md` 获取关于评分分析的详细指导与案例。
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；模型更改为 opus；优化功能、使用场景、评级等级定义、统计指标、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)

@@ -1,43 +1,7 @@
 ---
 name: knowledge-query
 description: 专注于竖屏短剧知识库查询和信息检索，提供专业知识服务。适用于查询剧本桥段、高能情节、创作技巧、商业运营等专业知识
-category: knowledge-research
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: changed
-        content: 模型更改为 opus
-      - type: improved
-        content: 优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-      - type: added
-        content: 添加 allowed-tools (Read) 和 model 字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 竖屏短剧知识库查询专家
@@ -107,16 +71,6 @@ changelog:
 - 知识总结需客观准确，不进行主观评论。
 - 输出内容应结构化，易于理解和应用。
 
-## 示例
+## 参考资料
 
-请参见 `{baseDir}/references/examples.md` 获取详细示例。该文件包含了多种知识查询场景的完整输出和分析说明。
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；模型更改为 opus；优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)

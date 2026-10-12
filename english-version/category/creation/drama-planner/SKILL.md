@@ -1,48 +1,8 @@
 ---
 name: drama-planner
-description: Create professional vertical short drama planning schemes, including emotional value analysis, golden three-second hook design, three-act structure planning, etc. Suitable for short drama project前期 planning, commercial scheme design, and creation guidance
-category: creation
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Create professional vertical short drama planning schemes, including emotional value analysis, golden three-second hook design, three-act structure planning, etc. Suitable for short drama project前期 planning, commercial scheme design, and creation guidance
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.2.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Added references/guide.md reference, improved detailed documentation section
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-      - type: added
-        content: Added allowed-tools (Read, Write) and model (opus) fields
-      - type: added
-        content: Added references/ structure to store detailed examples
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Vertical Short Drama Planner
@@ -128,22 +88,7 @@ Detailed, actionable planning scheme
 - Ensure all planning content conforms to vertical short drama characteristics and user needs.
 - Commercial breakpoint design must balance user experience and profit goals.
 
-## Examples
+## Resources
 
-Please refer to `{baseDir}/references/examples.md` for detailed planning examples. This file contains complete planning scheme examples and analysis instructions for various types (such as urban counterattack, sweet romance, suspense mystery, etc.).
-
-## Detailed Documentation
-
-See `{baseDir}/references/` directory for more documentation:
-- `guide.md` - Complete planning guide and theoretical system
-- `examples.md` - More scenario planning examples
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications, added references structure |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

@@ -1,41 +1,7 @@
 ---
 name: plot-points-analyzer
 description: 分析故事情节点，识别关键情节与转折点。适用于深度分析情节结构、评估情节发展有效性
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: added
-        content: 添加 allowed-tools (Read) 和 model (opus) 字段
-      - type: improved
-        content: 优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 情节点分析专家
@@ -99,21 +65,6 @@ changelog:
 - 确保情节点分类准确，功能描述清晰。
 - 建议具备可操作性，能指导情节优化。
 
-## 示例
+## 参考资料
 
-参见 `{baseDir}/references/examples.md` 目录获取更多详细示例:
-- `examples.md` - 包含不同类型故事（如都市爱情、古装玄幻、悬疑推理）的关键情节点分析示例。
-
-## 详细文档
-
-参见 `{baseDir}/references/examples.md` 获取关于情节点分析的详细指导与案例。
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；添加 allowed-tools (Read) 和 model (opus) 字段；优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)

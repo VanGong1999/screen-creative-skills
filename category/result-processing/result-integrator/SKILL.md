@@ -1,41 +1,7 @@
 ---
 name: result-integrator
 description: 整合多情点分析结果为综合报告，通过去重、分类、排序、总结生成高质量分析。适用于整合多分析源、生成统一报告
-category: result-processing
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: added
-        content: 添加 allowed-tools (Read) 和 model (opus) 字段
-      - type: improved
-        content: 优化功能、使用场景、整合原则、核心步骤、输入要求、输出格式、整合要求等描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 结果整合工具
@@ -114,21 +80,12 @@ changelog:
 - 报告内容需逻辑连贯，易于阅读和理解。
 - 确保最终输出的报告格式规范，符合预期要求。
 
-## 示例
+## 硬性约束
 
-参见 `{baseDir}/references/examples.md` 目录获取更多详细示例:
-- `examples.md` - 包含多智能体情节点分析结果整合、去重、分类、排序和总结的详细报告示例。
+- 不引入原文/子结果中不存在的新事实
+- 专业洞察须能回溯到已整合的证据
+- 冲突结果标注来源片段并给取舍理由
 
-## 详细文档
+## 参考资料
 
-参见 `{baseDir}/references/examples.md` 获取关于结果整合的详细指导与案例。
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，使其更精简并符合命令式语言规范；添加 allowed-tools (Read) 和 model (opus) 字段；优化功能、使用场景、整合原则、核心步骤、输入要求、输出格式、整合要求等描述，使其更符合命令式语言规范；添加约束条件、示例和详细文档部分。 |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)

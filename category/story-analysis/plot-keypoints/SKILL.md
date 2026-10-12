@@ -1,45 +1,7 @@
 ---
 name: plot-keypoints
 description: 梳理故事主线，提炼并按发展阶段排列主要情节点。适用于快速掌握故事结构、制作大纲及剧本改编结构梳理
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: changed
-        content: 模型更改为 opus
-      - type: improved
-        content: 优化功能、使用场景、核心步骤、输入要求、输出格式的描述，使其更符合命令式语言规范
-      - type: added
-        content: 添加约束条件、示例和详细文档部分
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-      - type: added
-        content: 添加 allowed-tools (Read) 和 model 字段
-      - type: added
-        content: 添加 references/ 结构存放详细示例
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 大情节点分析专家
@@ -92,22 +54,13 @@ changelog:
 - 确保主要情节点的总结完整、准确、细致。
 - 不使用阿拉伯数字为情节点标号。
 
-## 示例
+## 硬性约束
 
-请参见 `{baseDir}/references/examples.md` 获取详细示例。该文件包含了多种故事结构（如三幕式、五幕式、竖屏短剧、多线叙事等）的完整输入输出示例和分析说明，以及情节点提炼技巧。
+- 每个情节点表述不超过150字
+- 按故事发展时间顺序排列
+- 严格依据原文，不自行创作
 
-## 详细文档
+## 参考资料
 
-参见 `{baseDir}/references/` 目录获取更多文档:
-- `examples.md` - 详细分析示例（三幕式、五幕式、多线叙事等不同结构类型）
-- `guide.md` - 完整分析指南和最佳实践
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，添加 allowed-tools 和 model 字段，调整主内容语言风格，删除最佳实践，并引导至 references/examples.md |
-| 2.0.0 | 2026-01-11 | 按官方规范重构，添加 references 结构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

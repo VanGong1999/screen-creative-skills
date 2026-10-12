@@ -1,38 +1,7 @@
 ---
 name: script-evaluator
 description: 从思想性、艺术性、观赏性三维度评估影视剧本并打分。适用于剧本开发质量评估、修改方向确定、项目立项前审查
-category: evaluation
-version: 2.1.0
-last_updated: 2026-01-11
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: 宫凡
-allowed-tools:
-  - Read
-  - Write
-model: opus
-changelog:
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: 优化 description 字段，使其更精简并符合命令式语言规范
-      - type: added
-        content: 添加 allowed-tools (Read, Write) 和 model (opus) 字段
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: 按照 Agent Skills 官方规范重构
-      - type: improved
-        content: 优化 description，使用命令式语言，精简主内容
-      - type: added
-        content: 添加 license、compatibility 可选字段
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: 初始版本
 ---
 
 # 影视剧本评估专家
@@ -137,22 +106,13 @@ changelog:
 - 评分应客观公正，并附有详细分析。
 - 建议需具体可行，有助于剧本改进。
 
-## 示例
+## 硬性约束
 
-请参见 `{baseDir}/references/examples.md` 获取详细评估示例。该文件包含了多种剧本类型（如都市情感剧、科幻片、古装剧等）的完整评估报告和分析说明。
+- 8.5分及以上从严给出，须有充分论证
+- 评分细化到小数点后一位
+- 评估基于所提供剧本，不编造未写内容
 
-## 详细文档
+## 参考资料
 
-参见 `{baseDir}/references/` 目录获取更多文档:
-- `guide.md` - 影视剧本评估的完整指南，包括评估框架、评分标准、评估流程和注意事项
-- `examples.md` - 详细评估示例
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| 2.1.0 | 2026-01-11 | 优化 description 字段，添加 allowed-tools 和 model 字段，调整主内容语言风格，添加约束条件，并引导至 references/examples.md |
-| 2.0.0 | 2026-01-11 | 按官方规范重构 |
-| 1.0.0 | 2026-01-10 | 初始版本 |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)

@@ -1,46 +1,8 @@
 ---
 name: story-type-analyzer
-description: Analyze story genre types, extract creative elements and story features. Suitable for identifying genre positioning, extracting creativity, analyzing market audience
-category: story-analysis
-version: 2.1.0
-last_updated: 2026-01-11
+description: >-
+  Analyze story genre types, extract creative elements and story features. Suitable for identifying genre positioning, extracting creativity, analyzing market audience
 license: MIT
-compatibility: Claude Code 1.0+
-maintainer: Gong Fan
-allowed-tools:
-  - Read
-model: opus
-changelog:
-  - version: 2.2.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Added references/guide.md reference, improved detailed documentation section
-  - version: 2.1.0
-    date: 2026-01-11
-    changes:
-      - type: improved
-        content: Optimized description field to be more concise and comply with imperative language specifications
-      - type: added
-        content: Added allowed-tools (Read) and model (opus) fields
-      - type: improved
-        content: Optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications
-      - type: added
-        content: Added constraints, examples, and detailed documentation sections
-  - version: 2.0.0
-    date: 2026-01-11
-    changes:
-      - type: breaking
-        content: Refactored according to Agent Skills official specifications
-      - type: improved
-        content: Optimized description, using imperative language, simplified main content
-      - type: added
-        content: Added license and compatibility optional fields
-  - version: 1.0.0
-    date: 2026-01-10
-    changes:
-      - type: added
-        content: Initial version
 ---
 
 # Genre Type and Creative Element Extraction Expert
@@ -97,22 +59,7 @@ Analyze story genre types, extract creative elements, identify story features an
 - Genre classification must be accurate, creative extraction refined.
 - Value evaluation must be objective, give specific reasons.
 
-## Examples
+## Resources
 
-Please refer to `{baseDir}/references/examples.md` for detailed analysis examples.
-
-## Detailed Documentation
-
-See `{baseDir}/references/` directory for more documentation:
-- `guide.md` - Complete analysis guide and definition explanations
-- `examples.md` - More scenario examples
-
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 2.1.0 | 2026-01-11 | Optimized description field to be more concise and comply with imperative language specifications; added allowed-tools (Read) and model (opus) fields; optimized descriptions of functionality, use cases, core steps, input requirements, and output format to comply with imperative language specifications; added constraints, examples, and detailed documentation sections. |
-| 2.0.0 | 2026-01-11 | Refactored according to official specifications |
-| 1.0.0 | 2026-01-10 | Initial version |
+- [examples.md](references/examples.md)
+- [guide.md](references/guide.md)
