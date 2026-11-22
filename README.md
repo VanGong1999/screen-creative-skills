@@ -18,6 +18,13 @@ https://github.com/VanGong1999/screen-creative-skills
 ## 多智能体批量剧本策划评估生成（包含了此项目全部内容)：
 https://github.com/VanGong1999/juben
 
+## 主动型基于事件驱动的多智能体系统面向商业化写作，让写出来的内容更有画面感
+
+https://github.com/VanGong1999/ai-commerical-writing-personalagents
+
+基于DeepSeek的SuperAgents的面向商业化写作的类Grok-bot全流程透明的事件驱动型轻量化多智能系统｜harness&eval｜支持飞书自托管｜ai-commerical-writing-always-on-personal-multiAgents ｜面向番茄小说红果漫剧晋江起点七猫数据爬取热点搜索分析报告生成一键批量投稿剧本知识库支持|多智能体协作|带持久化自动执行人工确认｜Ontology｜146个Agents｜137个skills|83个tools｜自管理记忆｜DPO｜RSI|graph工程|一人公司｜你的主动型AI同事｜用户控制并积累偏好｜超省tokens｜个性化｜主动型AI同事们围绕真实产物协作｜写作任务跨时间继续｜故障回复
+
+
 ## 为什么选择这些 Skills？
 
 影视行业蓬勃发展，内容形式日益多元化——从竖屏短剧到长篇剧集，从网文IP到电影剧本，创作效率和质量成为核心竞争力。这 31 个精心设计的 Skills 专为影视创作者、策划师、内容评估师打造，将 AI 能力深度融入创作工作流，让每个环节都如虎添翼。
